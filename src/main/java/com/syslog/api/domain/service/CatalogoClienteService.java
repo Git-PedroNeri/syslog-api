@@ -16,7 +16,7 @@ public class CatalogoClienteService {
 
 	public Cliente buscar(Long clienteId) {
 		return clienteRepository.findById(clienteId)
-				.orElseThrow(() -> new ExceptionBussiness("Cliente Não Encontrado"));
+				.orElseThrow(() -> new ExceptionBussiness("Cliente Não Cadastrado"));
 	}
 
 	@Transactional // Garante o rollback
